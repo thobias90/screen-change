@@ -28,4 +28,9 @@ class AddRegistersActivity : AppCompatActivity() {
         intent.putExtra("price", etPrice.text.toString())
         startActivity(intent)
     }
+
+    fun btListOnClick(view: View) {
+        val intent = Intent(this, ListActivity::class.java)
+        startActivity(intent)
+    }
 }

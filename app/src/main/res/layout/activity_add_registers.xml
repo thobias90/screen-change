@@ -79,18 +79,27 @@
         android:layout_marginTop="16dp"
         android:onClick="btAddOnClick"
         android:text="Add"
-        app:layout_constraintEnd_toEndOf="@+id/etPrice"
         app:layout_constraintStart_toStartOf="@+id/etPrice"
         app:layout_constraintTop_toBottomOf="@+id/etPrice" />
+
+    <Button
+        android:id="@+id/btList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btListOnClick"
+        android:text="List"
+        app:layout_constraintBottom_toBottomOf="@+id/etCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etCode"
+        app:layout_constraintTop_toTopOf="@+id/etCode" />
 
     <Button
         android:id="@+id/btClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:onClick="btClearOnClick"
         android:text="Clear"
-        app:layout_constraintBottom_toBottomOf="@+id/etCode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/etCode"
-        app:layout_constraintTop_toTopOf="@+id/etCode" />
+        app:layout_constraintEnd_toEndOf="@+id/etPrice"
+        app:layout_constraintTop_toBottomOf="@+id/etPrice" />
 </androidx.constraintlayout.widget.ConstraintLayout>
