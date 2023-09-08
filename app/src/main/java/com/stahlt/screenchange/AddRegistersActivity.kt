@@ -35,10 +35,9 @@ class AddRegistersActivity : AppCompatActivity() {
         val intent = Intent(this, ListActivity::class.java).let {
             register.launch(it)
         }
-//        startActivity(intent)
     }
 
-    val register = registerForActivityResult(
+    private val register = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()) {
             result: ActivityResult ->
             if (result.resultCode == RESULT_OK) {
