@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContract
+import androidx.activity.result.contract.ActivityResultContracts
 
 class AddRegistersActivity : AppCompatActivity() {
     private lateinit var etCode: EditText
@@ -28,9 +31,23 @@ class AddRegistersActivity : AppCompatActivity() {
         intent.putExtra("price", etPrice.text.toString())
         startActivity(intent)
     }
-
     fun btListOnClick(view: View) {
-        val intent = Intent(this, ListActivity::class.java)
-        startActivity(intent)
+        val intent = Intent(this, ListActivity::class.java).let {
+            register.launch(it)
+        }
+//        startActivity(intent)
+    }
+
+    val register = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()) {
+            result: ActivityResult ->
+            if (result.resultCode == RESULT_OK) {
+                result.data?.let {
+                    if (it.hasExtra("productCode")) {
+                        val productCode = it.getStringExtra("productCode")
+                        etCode.setText(productCode)
+                    }
+                }
+            }
     }
 }
