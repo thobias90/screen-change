@@ -12,12 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Code"
-        app:layout_constraintBottom_toBottomOf="@+id/etCode"
+        app:layout_constraintBottom_toBottomOf="@+id/tvConfirmCode"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etCode" />
+        app:layout_constraintTop_toTopOf="@+id/tvConfirmCode" />
 
     <EditText
-        android:id="@+id/etCode"
+        android:id="@+id/tvConfirmCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -34,12 +34,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Quantity"
-        app:layout_constraintBottom_toBottomOf="@+id/etQuantity"
+        app:layout_constraintBottom_toBottomOf="@+id/tvConfirmQuantity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etQuantity" />
+        app:layout_constraintTop_toTopOf="@+id/tvConfirmQuantity" />
 
     <EditText
-        android:id="@+id/etQuantity"
+        android:id="@+id/tvConfirmQuantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -48,7 +48,7 @@
         android:hint="Product Quantity"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCode" />
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirmCode" />
 
     <TextView
         android:id="@+id/tvPrice"
@@ -56,12 +56,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Price"
-        app:layout_constraintBottom_toBottomOf="@+id/etPrice"
+        app:layout_constraintBottom_toBottomOf="@+id/tvConfirmPrice"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etPrice" />
+        app:layout_constraintTop_toTopOf="@+id/tvConfirmPrice" />
 
     <EditText
-        android:id="@+id/etPrice"
+        android:id="@+id/tvConfirmPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -70,18 +70,18 @@
         android:hint="Product Price"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etQuantity" />
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirmQuantity" />
 
     <Button
-        android:id="@+id/btAdd"
+        android:id="@+id/btConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:onClick="btAddOnClick"
         android:text="Add"
-        app:layout_constraintEnd_toEndOf="@+id/etPrice"
-        app:layout_constraintStart_toStartOf="@+id/etPrice"
-        app:layout_constraintTop_toBottomOf="@+id/etPrice" />
+        app:layout_constraintEnd_toEndOf="@+id/tvConfirmPrice"
+        app:layout_constraintStart_toStartOf="@+id/tvConfirmPrice"
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirmPrice" />
 
     <Button
         android:id="@+id/btClear"
@@ -89,8 +89,8 @@
         android:layout_height="wrap_content"
         android:onClick="btClearOnClick"
         android:text="Clear"
-        app:layout_constraintBottom_toBottomOf="@+id/etCode"
+        app:layout_constraintBottom_toBottomOf="@+id/tvConfirmCode"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/etCode"
-        app:layout_constraintTop_toTopOf="@+id/etCode" />
+        app:layout_constraintStart_toEndOf="@+id/tvConfirmCode"
+        app:layout_constraintTop_toTopOf="@+id/tvConfirmCode" />
 </androidx.constraintlayout.widget.ConstraintLayout>
